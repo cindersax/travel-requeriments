@@ -16,7 +16,7 @@
 
 <style>
     button{
-        padding: 8px 16px;
+        padding: 16px 16px;
         border-radius: 4px;
         background-color: teal;
         color: white;
