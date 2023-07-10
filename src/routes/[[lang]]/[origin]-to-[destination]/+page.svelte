@@ -31,31 +31,6 @@
 	{/each}
 </section>
 
-<table>
-	<thead>
-		<tr>
-			<th>title</th>
-			<th>type</th>
-			<th>category</th>
-			<th>subCategory</th>
-			<th>enforcement</th>
-			<th>documentTypes</th>
-		</tr>
-	</thead>
-	<tbody>
-		{#each requirements as { type, attributes: { title, category, subCategory, lastUpdatedAt, enforcement, documentTypes } }}
-			<tr>
-				<td>{title}</td>
-				<td>{type}</td>
-				<td>{category}</td>
-				<td>{subCategory}</td>
-				<td>{enforcement}</td>
-				<td>{documentTypes}</td>
-			</tr>
-		{/each}
-	</tbody>
-</table>
-
 <style>
 	* {
 		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,

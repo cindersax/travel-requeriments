@@ -1,5 +1,5 @@
-import {error} from "@sveltejs/kit"
-const  context = {
+import { error } from '@sveltejs/kit';
+const context = {
 	en: {
 		title: 'Unlock the World: Simplifying Travel Requirements for Your Next Adventure',
 		description: 'Enter Your Origin and Destination Below to Access Essential Travel Information',
@@ -17,15 +17,12 @@ const  context = {
 	}
 };
 
-
-
-export async function load({params}) {
-   
-    if(params.lang != 'en' && params.lang != 'es' && params.lang ){
-        throw error(404, 'not found')
-    }
-    return {
-        lang : params.lang ?? 'en',
-        context: context[params.lang ?? 'en']
-    };
+export async function load({ params }) {
+	if (params.lang != 'en' && params.lang != 'es' && params.lang) {
+		throw error(404, 'not found');
+	}
+	return {
+		lang: params.lang ?? 'en',
+		context: context[params.lang ?? 'en']
+	};
 }
