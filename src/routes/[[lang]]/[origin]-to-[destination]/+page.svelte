@@ -57,13 +57,4 @@
 			font-size: 1.8rem;
 		}
 	}
-
-	table,
-	th,
-	td {
-		border: 1px solid black;
-		border-collapse: collapse;
-		padding: 8px;
-		width: max-content;
-	}
 </style>

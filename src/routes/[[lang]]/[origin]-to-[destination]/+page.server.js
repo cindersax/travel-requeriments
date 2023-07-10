@@ -4,7 +4,8 @@ import { removeKeys } from '../../../lib/utils/jsonHelpers';
  * The base URL for the trips API.
  * @type {string}
  */
-const URL_TRIPS_V3 = 'https://requirements-api.sandbox.joinsherpa.com/v3/trips?include=restriction,procedure';
+const URL_TRIPS_V3 =
+	'https://requirements-api.sandbox.joinsherpa.com/v3/trips?include=restriction,procedure';
 
 /**
  * Sandbox Key, DO NOT USE IN PRODUCTION
@@ -134,7 +135,7 @@ const processVisaRequirements = async (lang, originCountry, destinationCountry) 
 			postTitle,
 			origin: travelNodes[0].locationName,
 			destination: travelNodes[1].locationName,
-			requirements: included
+			requirements: removeKeys(included, ['included', 'relationships', 'icon', 'id', 'severity', 'createdAt','startDate', 'endDate'])
 		};
 	} catch (error) {
 		console.error('An error occurred while fetching visa requirements:', error);
