@@ -6,41 +6,46 @@
 </script>
 
 <header>
-	<nav>
-		<a href="/en" data-sveltekit-preload-data>home</a>
-		<form id="lang_form">
-			<select form="lang_form" name="languages" id="languages" on:change={handleChange}>
-				<option value="">en</option>
-				<option value="es">es</option>
-			</select>
-		</form>
-	</nav>
+	<h2>
+		<a href="/">Travel Requirements</a>
+	</h2>
 </header>
 <main>
 	<slot />
 </main>
-<footer>
-	<p>footer stuf</p>
-</footer>
 
 <style>
+	h2 {
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+			Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+
 	* {
 		box-sizing: border-box;
 		margin: 0;
 	}
 	header {
 		background-color: white;
-		padding: 1em;
+		padding: 1.2em;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		border-bottom: 1px solid gainsboro;
 	}
-
-	nav {
-		width: 100%;
-		max-width: 720px;
-		padding: 1rem;
+	h2 a {
+		text-decoration: none;
+		color: black;
+		font-weight: 400;
+		padding: 0.5rem 1rem;
+		border: 1px solid black;
+		border-radius: 4px;
+	}
+	h2 a:hover {
+		background-color: #e9e9e9;
+	}
+	h2 a::before {
+		width: 5px;
+		background-color: blue;
 	}
 	main {
 		box-sizing: border-box;
@@ -54,12 +59,5 @@
 		margin: auto;
 		padding: 1rem;
 		height: auto;
-	}
-	footer {
-		border-top: 1px solid gainsboro;
-		padding: 1em;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 </style>
