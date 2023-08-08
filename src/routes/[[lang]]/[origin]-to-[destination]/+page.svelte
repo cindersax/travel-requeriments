@@ -45,9 +45,22 @@
 	}
 	h1 {
 		font-size: 3rem;
+		position: relative;
+		line-height: auto;
+	}
+	h1::after {
+		content: '';
+		width: 2rem;
+		height: 0.3125rem;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: #007474;
 	}
 	h2 {
+		line-height: 3rem;
 		font-size: 2rem;
+		position: relative;
 	}
 	p {
 		font-size: 1.2rem;
