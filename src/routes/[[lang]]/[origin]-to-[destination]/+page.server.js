@@ -102,11 +102,11 @@ const fetchVisaRequirements = async (lang, originCountry, destinationCountry) =>
  */
 const getVisaTitles = (lang, travelNodes) => {
 	const titles = {
-		en: `Travel requirements to ${travelNodes[1].locationName} from ${travelNodes[0].locationName}.`,
-		es: `Requisitos de viaje a ${travelNodes[1].locationName} desde ${travelNodes[0].locationName}.`,
-		de: `Reiseanforderungen nach ${travelNodes[1].locationName} von ${travelNodes[0].locationName}.`,
-		fr: `Exigences de voyage vers ${travelNodes[1].locationName} depuis ${travelNodes[0].locationName}.`,
-		pt: `Requisitos de viagem para ${travelNodes[1].locationName} a partir de ${travelNodes[0].locationName}.`
+		en: `Travel requirements to ${travelNodes[1].locationName} from ${travelNodes[0].locationName}`,
+		es: `Requisitos de viaje a ${travelNodes[1].locationName} desde ${travelNodes[0].locationName}`,
+		de: `Reiseanforderungen nach ${travelNodes[1].locationName} von ${travelNodes[0].locationName}`,
+		fr: `Exigences de voyage vers ${travelNodes[1].locationName} depuis ${travelNodes[0].locationName}`,
+		pt: `Requisitos de viagem para ${travelNodes[1].locationName} a partir de ${travelNodes[0].locationName}`
 	};
 
 	const currentTitle = titles[lang];
@@ -135,7 +135,16 @@ const processVisaRequirements = async (lang, originCountry, destinationCountry) 
 			postTitle,
 			origin: travelNodes[0].locationName,
 			destination: travelNodes[1].locationName,
-			requirements: removeKeys(included, ['included', 'relationships', 'icon', 'id', 'severity', 'createdAt','startDate', 'endDate'])
+			requirements: removeKeys(included, [
+				'included',
+				'relationships',
+				'icon',
+				'id',
+				'severity',
+				'createdAt',
+				'startDate',
+				'endDate'
+			])
 		};
 	} catch (error) {
 		console.error('An error occurred while fetching visa requirements:', error);

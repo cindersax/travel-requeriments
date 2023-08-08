@@ -53,11 +53,14 @@
 		flex-direction: column;
 		justify-content: center;
 		align-self: stretch;
-		gap: 2rem;
+		gap: 1rem;
 		width: 100%;
-		max-width: 720px;
+		max-width: 100ch;
 		margin: auto;
-		padding: 1rem;
+
 		height: auto;
+
+		margin-top: 1rem;
+		margin-bottom: 1rem;
 	}
 </style>

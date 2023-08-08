@@ -69,10 +69,20 @@
 	a {
 		color: #007474;
 	}
+	header {
+		padding: 3rem 5rem;
+		border: 1px solid gainsboro;
+		background-color: black;
+		border-radius: 8px;
+		color: azure;
+	}
 	section {
 		display: flex;
 		flex-direction: column;
 		gap: 3rem;
+		padding: 3rem 5rem;
+		border: 1px solid gainsboro;
+		border-radius: 8px;
 	}
 	article {
 		display: flex;
@@ -92,15 +102,33 @@
 	.anchor-button:hover {
 		background-color: #089191;
 	}
-	header {
-		margin-top: 4rem;
-	}
 	@media only screen and (max-width: 600px) {
 		h1 {
-			font-size: 2.4rem;
+			font-size: 1.7rem;
+			line-height: 2.5rem;
 		}
 		h2 {
-			font-size: 1.8rem;
+			font-size: 1.5rem;
+			line-height: 1.8rem;
+		}
+		p {
+			font-size: 1rem;
+			line-height: 1.2em;
+		}
+
+		header {
+			padding: 1rem 1rem;
+			border: 1px solid gainsboro;
+			background-color: black;
+			border-radius: 8px;
+			color: azure;
+		}
+		section {
+			display: flex;
+			flex-direction: column;
+			gap: 3rem;
+			padding: 1rem 1rem;
+			border: none;
 		}
 	}
 </style>
