@@ -18,14 +18,18 @@
 			<!-- actions -->
 			{#each actions.filter((action) => action.type == 'LINK') as action}
 				<p />
-				<a href={action.url}>complete online</a>
+				<a href={action.url} class="anchor-button" target="”_blank”">Complete Online</a>
 			{/each}
 			<!-- sources -->
 			{#if sources.length > 0}
 				<h3>Sources:</h3>
-				{#each sources as source}
-					<a href={source.url}>{source.title}</a>
-				{/each}
+				<ul>
+					{#each sources as source}
+						<li>
+							<a href={source.url} target="”_blank”">{source.title}</a>
+						</li>
+					{/each}
+				</ul>
 			{/if}
 		</article>
 	{/each}
@@ -48,6 +52,35 @@
 	p {
 		font-size: 1.2rem;
 		line-height: 1.5em;
+	}
+	a {
+		color: #007474;
+	}
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+	article {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		box-sizing: border-box;
+	}
+	.anchor-button {
+		background-color: #007474;
+		color: white;
+		padding: 0.5rem 1rem;
+		text-decoration: none;
+		font-weight: 600;
+		border-radius: 4px;
+		width: fit-content;
+	}
+	.anchor-button:hover {
+		background-color: #089191;
+	}
+	header {
+		margin-top: 4rem;
 	}
 	@media only screen and (max-width: 600px) {
 		h1 {
