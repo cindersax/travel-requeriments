@@ -11,7 +11,7 @@
 	$: requestUrl = lang === 'en' ? baseUrl : `/${lang}` + baseUrl;
 </script>
 
-<h1>{title}</h1>
+<h1>Unlock the World: Simplifying <strong>Travel Requirements</strong> for Your Next Adventure</h1>
 <p>{description}</p>
 <form id="requirement_search" method="POST" action={requestUrl}>
 	<Input form="requirement_search" name="origin" label={originLabel} bind:value={origin} required />
@@ -35,6 +35,11 @@
 	h1 {
 		font-size: 3rem;
 		text-align: center;
+	}
+
+	h1 strong {
+		border-bottom: 0.3rem solid #007474;
+		padding: 0 0.5rem;
 	}
 
 	p {
