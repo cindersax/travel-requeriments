@@ -7,13 +7,17 @@
 	const { title, originLabel, destinationLabel, description, btnText } = context;
 	let origin = '';
 	let destination = '';
+	let isLoading = false;
+	let handleSubmit = async () => {
+		isLoading = true;
+	};
 	$: baseUrl = `/${origin.toLowerCase()}-to-${destination.toLowerCase()}`;
 	$: requestUrl = lang === 'en' ? baseUrl : `/${lang}` + baseUrl;
 </script>
 
 <h1>Unlock the World: Simplifying <strong>Travel Requirements</strong> for Your Next Adventure</h1>
 <p>{description}</p>
-<form id="requirement_search" method="POST" action={requestUrl}>
+<form id="requirement_search" method="POST" action={requestUrl} on:submit={handleSubmit}>
 	<Input form="requirement_search" name="origin" label={originLabel} bind:value={origin} required />
 	<Input
 		form="requirement_search"
@@ -22,7 +26,13 @@
 		bind:value={destination}
 		required
 	/>
-	<Button>{btnText}</Button>
+	<Button>
+		{#if isLoading}
+			Loading...
+		{:else}
+			{btnText}
+		{/if}
+	</Button>
 </form>
 
 <style>
