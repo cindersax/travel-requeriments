@@ -57,9 +57,8 @@
 		width: 100%;
 		max-width: 100ch;
 		margin: auto;
-
 		height: auto;
-
+		min-height: 90vh;
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 	}

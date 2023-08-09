@@ -46,6 +46,7 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 16px;
+		padding: 1rem;
 	}
 
 	@media only screen and (max-width: 600px) {

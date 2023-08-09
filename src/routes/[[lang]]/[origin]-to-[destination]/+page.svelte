@@ -57,6 +57,13 @@
 		left: 0;
 		background-color: #007474;
 	}
+	ul {
+		display: inline-block;
+		list-style-position: inside;
+	}
+	li {
+		display: list-item;
+	}
 	h2 {
 		line-height: 3rem;
 		font-size: 2rem;

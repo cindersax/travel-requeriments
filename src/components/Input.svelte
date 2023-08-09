@@ -82,6 +82,8 @@
 		width: 100%;
 		transition: border-color 0.15s;
 		font-size: 18px;
+		background-color: white;
+		color: #888;
 	}
 	select:focus {
 		outline: none;
