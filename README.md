@@ -16,7 +16,7 @@ A web application built with Svelte and SvelteKit that provides travelers with e
 ### Setup
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/yourusername/travel-requirements-finder.git
+   git clone https://github.com/cindersax/travel-requeriments
    ```
 2. **Install dependencies**
    ```bash
