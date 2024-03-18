@@ -1,38 +1,35 @@
-# create-svelte
+# Travel Requirements Finder
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Overview
+A web application built with Svelte and SvelteKit that provides travelers with essential travel requirements (visa, vaccination, etc.) based on their nationality and destination.
 
-## Creating a project
+## Features
+- **Easy Search**: Input your nationality and destination for specific travel requirements.
+- **Real-Time Data**: Access up-to-date travel guidelines.
+- **Responsive Design**: Works smoothly on all devices.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Quick Start
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Prerequisites
+- Node.js (v14+)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+### Setup
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/yourusername/travel-requirements-finder.git
+   ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+3. **Run locally**
+   ```bash
+   npm run dev
+   ```
+   Visit `http://localhost:3000` in your browser.
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
+### Production Build
 ```bash
 npm run build
+npm start
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
